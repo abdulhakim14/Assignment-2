@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table</title>
+  <script type="text/javascript">
+    
+    function generateMultiplicationTable() {
+    
+      var number = prompt("Enter a number:");
+
+     
+      number = parseInt(number);
+
+     
+      var table = document.createElement("table");
+
+      
+      for (var i = 1; i <= 10; i++) {
+        
+        var row = document.createElement("tr");
+
+        
+        var cell1 = document.createElement("td");
+        var cell2 = document.createElement("td");
+
+       
+        cell1.textContent = number + " x " + i;
+        cell2.textContent = number * i;
+
+        
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+
+       
+        table.appendChild(row);
+      }
+
+     
+      document.body.appendChild(table);
+    }
+  </script>
+</head>
+<body>
+  <!-- Button to trigger the table generation -->
+  <button onclick="generateMultiplicationTable()">Generate Table</button>
+</body>
+</html>

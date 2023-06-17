@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Problem 4 Name Analysis</title>
+  <script type="text/javascript">
+   
+    function analyzeName() {
+    
+      var name = prompt("Enter your name:");
+
+      
+      var length = name.length;
+
+      
+      var lowercaseCount = 0;
+      var uppercaseCount = 0;
+
+      
+      for (var i = 0; i < length; i++) {
+        var char = name.charAt(i);
+
+       
+        if (char >= 'a' && char <= 'z') {
+          lowercaseCount++;
+        } else if (char >= 'A' && char <= 'Z') {
+          uppercaseCount++;
+        }
+      }
+
+      
+      alert("Name length: " + length +
+            "\nLowercase letters: " + lowercaseCount +
+            "\nUppercase letters: " + uppercaseCount);
+    }
+  </script>
+</head>
+<body>
+  <!-- Button to trigger name analysis -->
+  <button onclick="analyzeName()">Analyze Name</button>
+</body>
+</html>

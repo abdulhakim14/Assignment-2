@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Problem 3 Even Numbers Printer</title>
+  <script type="text/javascript">
+    
+    function printEvenNumbers() {
+      
+      var number = prompt("Enter a number:");
+
+
+      number = parseInt(number);
+
+
+      var evenNumbers = "";
+
+
+      for (var i = 1; i <= number; i++) {
+        if (i % 2 === 0) {
+          evenNumbers += i + " ";
+        }
+      }
+
+
+      document.getElementById("result").textContent = evenNumbers;
+    }
+  </script>
+</head>
+<body>
+  <!-- Button to trigger printing of even numbers -->
+  <button onclick="printEvenNumbers()">Print Even Numbers</button>
+
+  <!-- Result area to display the even numbers -->
+  <p id="result"></p>
+</body>
+</html>
